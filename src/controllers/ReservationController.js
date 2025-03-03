@@ -1,6 +1,7 @@
 const Reservation = require("../models/Reservation");
 const Room = require("../models/Room");
 const Employee = require("../models/Employee");
+const {Sequelize} = require("sequelize")
 
 // Ajouter une réservation
 const addReservation = async (req, res) => {
