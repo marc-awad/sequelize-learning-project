@@ -11,4 +11,13 @@ const sequelize = new Sequelize(
   }
 )
 
+sequelize
+  .sync({ force: false }) // force: true supprime et recrée les tables, force: false préserve les données
+  .then(() => {
+    console.log("Tables synchronisées avec succès")
+  })
+  .catch((error) => {
+    console.error("Erreur de synchronisation :", error)
+  })
+
 module.exports = sequelize
